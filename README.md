@@ -20,7 +20,7 @@ y: str = "";
 y+="a"
 
 l: [u32] = [1, 2, 3, 4, 5]
-l2: [u32] = [5]*500;
+l2: [u32] = [5]*500
 l3: [u32] = [5 for i in ..500 if i % 2 == 0]
 l = l2 + l3
 
@@ -37,9 +37,14 @@ for i in l {
 
 // Functions
 fn func1(x: int, y: int) -> int {
+  ret x+y
 }
 
-
+fn elevate(x: (int)->int) -> ([int])->[int]{
+  ret (arr){
+      ret [x(i) for i in arr]
+  }
+}
 
 
 
